@@ -1,0 +1,9 @@
+def dayline(text, *args):
+	if text > 7:
+		print('Hello')
+	elif text == 'John':
+		print('Hello, John')
+	else:
+		print('There is no such name')
+
+dayline(7)
