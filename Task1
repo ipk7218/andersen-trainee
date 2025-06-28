@@ -1,14 +1,29 @@
-def dayline(text, *args):
-	if text > 7:
+# Make up an algorithm 
+# If the entered number is greater than 7, then print “Hello” 
+
+def HelloGreater(num):
+	if num > 7:
 		print('Hello')
-	elif text == 'John':
-		print('Hello, John')
+	else:
+		print('Incorrect number')
+
+#tests
+print('Task1.1')
+HelloGreater(3) # Incorrect number
+HelloGreater(8) # Hello
+
+#If the entered name matches “John”, then output “Hello, John”, if not, then output "There is no such name" 
+
+def HelloJohn(text, *args):
+	special_text = 'John'
+	if text == special_text:
+		print(f'Hello, {special_text}')
 	else:
 		print('There is no such name')
 
 #tests
-dayline(3)
-dayline(8)
-dayline('John')
-dayline('Mikael')
-dayline(3, 4, 4)
+print('Task1.2')
+HelloJohn('John') # Hello, John
+HelloJohn('Mikhail') # There is no such name
+
+#There is a numeric array at the input, it is necessary to output array elements that are multiples of 3 
