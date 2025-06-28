@@ -1,0 +1,25 @@
+# Answer the questions
+# Given bracket sequence: [((())()(())]] 
+# Can this sequence be considered correct? 
+# No, this is can't be considered correct.
+
+# If the answer to the previous question is “no”, then what needs to be changed in it to make it correct? 
+
+brackets = '[((())()(())]]'
+print(brackets)
+left_round_bracket = 0
+right_round_bracket = 0
+if brackets[0] != '[' and brackets[len(brackets)] != ']':
+    print('Error')
+else:
+    for i in range(1,len(brackets)):
+        if brackets[i] == '(':
+            left_round_bracket += 1
+        elif brackets[i] == ')':
+            right_round_bracket += 1
+        else:
+            right_round_bracket += 1
+        #print(left_round_bracket - right_round_bracket)
+        if left_round_bracket - right_round_bracket < 0:
+            brackets.replace(brackets[i],'f')
+print(brackets)
