@@ -6,4 +6,9 @@ def dayline(text, *args):
 	else:
 		print('There is no such name')
 
-dayline(7)
+#tests
+dayline(3)
+dayline(8)
+dayline('John')
+dayline('Mikael')
+dayline(3, 4, 4)
